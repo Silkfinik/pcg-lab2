@@ -1,5 +1,3 @@
-// scripts.js
-
 $(document).ready(function () {
   var table = $("#imagesTable").DataTable({
     language: {
@@ -32,7 +30,6 @@ $(document).ready(function () {
 
     $("#progressBar").css("width", "0%").attr("aria-valuenow", 0).text("0%");
 
-    // Ограничение на 100000 файлов
     var maxFiles = 100000;
     var fileCount = Math.min(files.length, maxFiles);
     if (files.length > maxFiles) {
@@ -179,7 +176,6 @@ $(document).ready(function () {
       });
   });
 
-  // Функция для экспорта таблицы в CSV
   function exportTableToCSV(filename) {
     var csv = [];
     var rows = $("#imagesTable tr");
